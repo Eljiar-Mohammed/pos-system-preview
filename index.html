@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="POS Pro - modern offline-first desktop POS built with React, Electron, and Tailwind."
+    />
+    <title>POS Pro - Desktop POS Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        color-scheme: light;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(22px);
+        transition: opacity 0.7s ease, transform 0.7s ease;
+      }
+      .reveal.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .pulse-cta {
+        animation: pulseGlow 2.4s ease-in-out infinite;
+      }
+      .float-mockup {
+        animation: floatY 6s ease-in-out infinite;
+      }
+      @keyframes pulseGlow {
+        0%,
+        100% {
+          box-shadow: 0 10px 20px rgba(249, 115, 22, 0.3);
+          transform: translateY(0);
+        }
+        50% {
+          box-shadow: 0 16px 32px rgba(249, 115, 22, 0.45);
+          transform: translateY(-1px);
+        }
+      }
+      @keyframes floatY {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .reveal,
+        .reveal.show,
+        .pulse-cta,
+        .float-mockup {
+          opacity: 1;
+          transform: none;
+          transition: none;
+          animation: none;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-[#F8FAFC] text-slate-700 antialiased">
+    <div class="min-h-screen">
+      <header class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/90 backdrop-blur">
+        <nav
+          class="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
+          aria-label="Main navigation"
+        >
+          <a href="#" class="text-xl font-extrabold tracking-tight text-slate-900">POS Pro</a>
+          <a
+            href="#"
+            class="pulse-cta rounded-xl bg-orange-500 px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-orange-500/30 transition-all duration-300 hover:-translate-y-0.5 hover:bg-orange-400 hover:shadow-xl hover:shadow-orange-500/40"
+          >
+            Buy Now
+          </a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="relative overflow-hidden">
+          <div class="absolute inset-x-0 top-0 h-40 bg-gradient-to-r from-blue-100 via-cyan-100 to-sky-100"></div>
+          <div class="mx-auto w-full max-w-7xl px-4 pb-20 pt-16 sm:px-6 sm:pt-20 lg:px-8">
+            <div class="grid items-center gap-12 lg:grid-cols-2">
+              <div class="relative reveal">
+                <p class="mb-4 inline-flex items-center rounded-full border border-blue-200 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wider text-blue-700">
+                  Desktop POS for modern businesses
+                </p>
+                <h1 class="text-4xl font-extrabold leading-tight text-slate-900 sm:text-5xl lg:text-6xl">
+                  The Ultimate Offline-First POS System
+                </h1>
+                <p class="mt-5 max-w-xl text-base text-slate-600 sm:text-lg">
+                  Built with React, Electron &amp; Tailwind to deliver lightning-fast billing, smooth operations, and total reliability even without internet.
+                </p>
+                <div class="mt-8 flex flex-wrap items-center gap-3">
+                  <a
+                    href="#screenshots"
+                    class="pulse-cta rounded-xl bg-orange-500 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-orange-500/30 transition-all duration-300 hover:-translate-y-0.5 hover:bg-orange-400 hover:shadow-xl hover:shadow-orange-500/40"
+                  >
+                    Live Preview
+                  </a>
+                  <a
+                    href="#features"
+                    class="rounded-xl border border-blue-200 bg-white px-6 py-3 text-sm font-semibold text-blue-700 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-300 hover:bg-blue-50 hover:shadow-md"
+                  >
+                    Features
+                  </a>
+                </div>
+              </div>
+
+              <div class="reveal float-mockup lg:justify-self-end">
+                <div class="mx-auto w-full max-w-2xl rounded-[2rem] bg-gradient-to-br from-blue-500 via-cyan-500 to-sky-500 p-[2px] shadow-2xl shadow-blue-500/20">
+                  <div class="rounded-[1.9rem] bg-slate-900 p-3 sm:p-4">
+                    <div class="rounded-[1.5rem] border border-slate-700 bg-slate-950 p-4">
+                      <div class="mb-3 flex items-center gap-1.5">
+                        <span class="h-2.5 w-2.5 rounded-full bg-red-400"></span>
+                        <span class="h-2.5 w-2.5 rounded-full bg-yellow-300"></span>
+                        <span class="h-2.5 w-2.5 rounded-full bg-green-400"></span>
+                      </div>
+
+                      <div
+                        class="rounded-xl border border-slate-700 bg-slate-900 p-3"
+                        role="img"
+                        aria-label="POS terminal screenshot inside MacBook style frame"
+                      >
+                        <div class="grid gap-3 sm:grid-cols-12">
+                          <aside class="rounded-lg bg-slate-800 p-3 sm:col-span-3">
+                            <p class="text-[10px] font-semibold uppercase tracking-wide text-slate-300">Categories</p>
+                            <div class="mt-3 space-y-2">
+                              <div class="h-2 rounded bg-slate-700"></div>
+                              <div class="h-2 w-5/6 rounded bg-slate-700"></div>
+                              <div class="h-2 w-4/6 rounded bg-slate-700"></div>
+                              <div class="h-2 w-3/6 rounded bg-slate-700"></div>
+                            </div>
+                          </aside>
+                          <div class="space-y-3 sm:col-span-6">
+                            <div class="rounded-lg bg-slate-800 p-3">
+                              <p class="text-[10px] font-semibold uppercase tracking-wide text-cyan-200">POS Terminal</p>
+                              <div class="mt-3 grid grid-cols-3 gap-2">
+                                <div class="h-8 rounded bg-slate-700"></div>
+                                <div class="h-8 rounded bg-slate-700"></div>
+                                <div class="h-8 rounded bg-slate-700"></div>
+                                <div class="h-8 rounded bg-slate-700"></div>
+                                <div class="h-8 rounded bg-slate-700"></div>
+                                <div class="h-8 rounded bg-slate-700"></div>
+                              </div>
+                            </div>
+                            <div class="h-14 rounded-lg bg-gradient-to-r from-cyan-500/30 to-blue-500/30"></div>
+                          </div>
+                          <aside class="rounded-lg bg-slate-800 p-3 sm:col-span-3">
+                            <p class="text-[10px] font-semibold uppercase tracking-wide text-slate-300">Current Bill</p>
+                            <div class="mt-3 space-y-2">
+                              <div class="h-2 rounded bg-slate-700"></div>
+                              <div class="h-2 rounded bg-slate-700"></div>
+                              <div class="h-2 rounded bg-slate-700"></div>
+                            </div>
+                            <div class="mt-3 h-7 rounded bg-orange-500/80"></div>
+                          </aside>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mx-auto mt-2 h-2.5 w-40 rounded-b-2xl bg-slate-700 sm:w-56"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="h-16 bg-gradient-to-r from-blue-100 via-cyan-100 to-blue-100"></div>
+
+        <section id="features" class="py-20 sm:py-24">
+          <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mb-10 max-w-2xl reveal">
+              <p class="text-sm font-bold uppercase tracking-[0.18em] text-blue-700">Core Value</p>
+              <h2 class="mt-2 text-3xl font-bold text-slate-900 sm:text-4xl">Powerful features built for growth</h2>
+              <p class="mt-3 text-slate-600">Everything you need to run a reliable POS operation with less setup and more control.</p>
+            </div>
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              <article class="reveal rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-xl">
+                <div class="mb-4 inline-flex rounded-lg bg-blue-50 p-2 text-blue-700">
+                  <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M4 8H20M7 12H10M7 16H13M5 5H19V19H5V5Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-slate-900">Offline First</h3>
+                <p class="mt-2 text-sm text-slate-600">Keep selling without interruptions even when the internet is unavailable.</p>
+              </article>
+
+              <article class="reveal rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-xl">
+                <div class="mb-4 inline-flex rounded-lg bg-blue-50 p-2 text-blue-700">
+                  <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M6 6H18V18H6V6Z" stroke="currentColor" stroke-width="1.7" />
+                    <path d="M9 9H15V15H9V9Z" stroke="currentColor" stroke-width="1.7" />
+                  </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-slate-900">Zero Database Setup</h3>
+                <p class="mt-2 text-sm text-slate-600">Start instantly with local storage architecture and no complex database install.</p>
+              </article>
+
+              <article class="reveal rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-xl">
+                <div class="mb-4 inline-flex rounded-lg bg-blue-50 p-2 text-blue-700">
+                  <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M7 7H17V12H7V7Z" stroke="currentColor" stroke-width="1.7" />
+                    <path d="M9 12V16H15V12M8 16H16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-slate-900">Smart Receipt Printing</h3>
+                <p class="mt-2 text-sm text-slate-600">Generate accurate receipts with customizable formatting and fast output.</p>
+              </article>
+
+              <article class="reveal rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-xl">
+                <div class="mb-4 inline-flex rounded-lg bg-blue-50 p-2 text-blue-700">
+                  <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M4 19H20M7 15V9M12 15V6M17 15V11" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                  </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-slate-900">Advanced Z-Reports</h3>
+                <p class="mt-2 text-sm text-slate-600">Get complete end-of-day insights for cash flow, tax, and transaction totals.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="screenshots" class="py-20 sm:py-24">
+          <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mb-10 max-w-2xl reveal">
+              <p class="text-sm font-bold uppercase tracking-[0.18em] text-orange-500">Product Screens</p>
+              <h2 class="mt-2 text-3xl font-bold text-slate-900 sm:text-4xl">Explore every key workflow</h2>
+              <p class="mt-3 text-slate-600">From cashier operations to admin controls, every screen is optimized for speed and clarity.</p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+              <figure class="reveal overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-xl">
+                <div class="h-56 bg-gradient-to-br from-blue-50 to-cyan-100 shadow-inner"><img src="./images/Screenshot 2026-03-27 163355.png" alt=""></div>
+                <figcaption class="border-t border-slate-200 px-4 py-3 text-[0.95rem] font-semibold tracking-tight text-slate-800">Intuitive POS Terminal</figcaption>
+              </figure>
+              <figure class="reveal overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-xl">
+                <div class="h-56 bg-gradient-to-br from-blue-50 to-cyan-100 shadow-inner"><img src="./images/Screenshot 2026-03-27 163525.png" alt=""></div>
+                <figcaption class="border-t border-slate-200 px-4 py-3 text-[0.95rem] font-semibold tracking-tight text-slate-800">Fast Cart Management</figcaption>
+              </figure>
+              <figure class="reveal overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-xl">
+                <div class="h-56 bg-gradient-to-br from-blue-50 to-cyan-100 shadow-inner"><img src="./images/Screenshot 2026-03-27 163607.png" alt=""></div>
+                <figcaption class="border-t border-slate-200 px-4 py-3 text-[0.95rem] font-semibold tracking-tight text-slate-800">Quick Category Navigation</figcaption>
+              </figure>
+              <figure class="reveal overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-xl">
+                <div class="h-56 bg-gradient-to-br from-blue-50 to-cyan-100 shadow-inner"><img src="./images/Screenshot 2026-03-27 163450.png" alt=""></div>
+                <figcaption class="border-t border-slate-200 px-4 py-3 text-[0.95rem] font-semibold tracking-tight text-slate-800">Advanced Product Modifiers</figcaption>
+              </figure>
+              <figure class="reveal overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-xl">
+                <div class="h-56 bg-gradient-to-br from-blue-50 to-cyan-100 shadow-inner"><img src="./images/Screenshot 2026-03-27 163508.png" alt=""></div>
+                <figcaption class="border-t border-slate-200 px-4 py-3 text-[0.95rem] font-semibold tracking-tight text-slate-800">Customizable Add-ons</figcaption>
+              </figure>
+              <figure class="reveal overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-xl">
+                <div class="h-56 bg-gradient-to-br from-blue-50 to-cyan-100 shadow-inner"><img src="./images/Screenshot 2026-03-27 163626.png" alt=""></div>
+                <figcaption class="border-t border-slate-200 px-4 py-3 text-[0.95rem] font-semibold tracking-tight text-slate-800">Secure PIN Authentication</figcaption>
+              </figure>
+              <figure class="reveal overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-xl">
+                <div class="h-56 bg-gradient-to-br from-blue-50 to-cyan-100 shadow-inner"><img src="./images/Screenshot 2026-03-27 164304.png" alt=""></div>
+                <figcaption class="border-t border-slate-200 px-4 py-3 text-[0.95rem] font-semibold tracking-tight text-slate-800">Admin Analytics Dashboard</figcaption>
+              </figure>
+              <figure class="reveal overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-xl">
+                <div class="h-56 bg-gradient-to-br from-blue-50 to-cyan-100 shadow-inner"><img src="./images/Screenshot 2026-03-27 164319.png" alt=""></div>
+                <figcaption class="border-t border-slate-200 px-4 py-3 text-[0.95rem] font-semibold tracking-tight text-slate-800">Menu Management (CRUD)</figcaption>
+              </figure>
+              <figure class="reveal overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-xl">
+                <div class="h-56 bg-gradient-to-br from-blue-50 to-cyan-100 shadow-inner"><img src="./images/Screenshot 2026-03-27 164326.png" alt=""></div>
+                <figcaption class="border-t border-slate-200 px-4 py-3 text-[0.95rem] font-semibold tracking-tight text-slate-800">Quick Price Editor</figcaption>
+              </figure>
+              <figure class="reveal overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-xl">
+                <div class="h-56 bg-gradient-to-br from-blue-50 to-cyan-100 shadow-inner"><img src="./images/Screenshot 2026-03-27 165849.png" alt=""></div>
+                <figcaption class="border-t border-slate-200 px-4 py-3 text-[0.95rem] font-semibold tracking-tight text-slate-800">System & Security Settings</figcaption>
+              </figure>
+              <figure class="reveal overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-xl">
+                <div class="h-56 bg-gradient-to-br from-blue-50 to-cyan-100 shadow-inner"><img src="./images/1774630945763264.JPG" alt=""></div>
+                <figcaption class="border-t border-slate-200 px-4 py-3 text-[0.95rem] font-semibold tracking-tight text-slate-800">Dual Receipt Printing</figcaption>
+              </figure>
+              <figure class="reveal overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-xl">
+                <div class="h-56 bg-gradient-to-br from-blue-50 to-cyan-100 shadow-inner"><img src="./images/Design sans titre.png" alt=""></div>
+                <figcaption class="border-t border-slate-200 px-4 py-3 text-[0.95rem] font-semibold tracking-tight text-slate-800">End-of-Day Z-Report</figcaption>
+              </figure>
+              
+            </div>
+          </div>
+        </section>
+
+        <div class="h-16 bg-gradient-to-r from-cyan-100 via-sky-100 to-blue-100"></div>
+
+        <section class="py-16 sm:py-20">
+          <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="reveal rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+              <p class="text-sm font-bold uppercase tracking-[0.18em] text-blue-700">Built With</p>
+              <h2 class="mt-2 text-2xl font-bold text-slate-900 sm:text-3xl">Modern and reliable stack</h2>
+              <div class="mt-6 flex flex-wrap gap-3">
+                <span class="rounded-full border border-blue-200 bg-gradient-to-r from-blue-50 to-cyan-50 px-4 py-2 text-sm font-semibold text-blue-700 shadow-sm">React 19</span>
+                <span class="rounded-full border border-blue-200 bg-gradient-to-r from-blue-50 to-cyan-50 px-4 py-2 text-sm font-semibold text-blue-700 shadow-sm">Tailwind CSS</span>
+                <span class="rounded-full border border-blue-200 bg-gradient-to-r from-blue-50 to-cyan-50 px-4 py-2 text-sm font-semibold text-blue-700 shadow-sm">Electron</span>
+                <span class="rounded-full border border-blue-200 bg-gradient-to-r from-blue-50 to-cyan-50 px-4 py-2 text-sm font-semibold text-blue-700 shadow-sm">Local JSON Storage</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="border-t border-slate-200 py-10">
+        <div class="mx-auto w-full max-w-7xl px-4 text-center text-sm text-slate-500 sm:px-6 lg:px-8">
+          &copy; 2026 POS Pro. All rights reserved.
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+
+      document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>
